@@ -1,0 +1,218 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Retirement Calculator</title>
+  </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Signup</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+
+    .scb-blue{
+    	background-color: #0074EB;
+    }
+
+    .scb-green{
+    	background-color:#35D300;
+    }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f8f9fa;
+      }
+
+      #accordion {
+        width: 100%;
+        max-width: 800px;
+        padding: 15px;
+        margin: auto;
+      }
+
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+	<div id="accordion" class="shadow p-3 mb-5 bg-white rounded">
+		<figure class="text-center">
+		  <blockquote class="blockquote">
+		    <p class="h3">Your Personal Retirement Guide.</p>
+		  </blockquote>
+		  <figcaption class="blockquote-footer">
+		    We will help you secure your future
+		  </figcaption>
+		</figure>
+	  <div class="card">
+	    <div class="card-header scb-blue" id="headingOne">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Personal Information
+	        </button>
+	      </h5>
+	    </div>
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+	      <div class="card-body">
+	          <div class="form-row">
+	          	<div class="col-md-6 mb-3">
+				    <label>Current Age</label>
+				    <input type="number" class="form-control" min="21">          		
+	          	</div>
+	          	<div class="col-md-6 mb-3">
+				    <label>Desired Retirement Age</label>
+				    <input type="number" class="form-control" min="65">          		
+	          	</div>
+			  </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="card-header scb-blue" id="headingTwo">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	          Investment Goals
+	        </button>
+	      </h5>
+	    </div>
+	    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+	      <div class="card-body">
+	          <div class="form-row">
+	          	<!--div class="col-md-6 mb-3">
+				    <label>Desired Saved Amount For Retirement</label>
+				    <input type="number" class="form-control" min="0">          		
+	          	</div!-->
+				<div class="col-md-6 mb-3">
+				    <label>Please specify your investment goals</label>
+				    <select class="form-control">
+					<option value="Choose">Choose</option>
+					    <option value="Dream Home">Dream Home</option>
+					    <option value="Dream Car">Dream Car</option>
+					    <option value="Dream Holiday">Dream Holiday</option>
+						<option value="Health">Health</option>
+					 </select>          		
+	          	</div>
+	          	<!--div class="col-md-6 mb-3">
+				    <label>Please specify your desired retirement amount</label>
+				    <select class="form-control">
+					<option value="Choose">Choose</option>
+					    <option value="Dream Home">Dream Home</option>
+					    <option value="Dream Car">Dream Car</option>
+					    <option value="Dream Holiday">Dream Holiday</option>
+						<option value="Health">Health</option>
+					 </select>          		
+	          	</div!-->
+				
+				<div class="col-md-6 mb-3">
+				    <label>Desired Saved Amount For Retirement</label>
+				    <input type="number" class="form-control" min="0">          		
+	          	</div>
+			  </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="card-header scb-blue" id="headingThree">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          Income Details
+	        </button>
+	      </h5>
+	    </div>
+	    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+	      <div class="card-body">
+	          <div class="form-row">
+	          	<div class="col-md-6 mb-3">
+				    <label>Your Annual Income</label>
+				    <input type="number" class="form-control" min="0">          		
+	          	</div>
+	          	<div class="col-md-6 mb-3">
+				    <label>Income Growth Rate %</label>
+				    <input type="number" class="form-control" min="0">          		
+	          	</div>
+			  </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="card-header scb-blue" id="headingFour">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	          Savings/Investments
+	        </button>
+	      </h5>
+	    </div>
+	    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+	      <div class="card-body">
+	          <div class="form-row">
+	          	<div class="col-md-6 mb-3">
+				    <label>Current Savings For Retirement</label>
+				    <input type="number" class="form-control" min="0">          		
+	          	</div>
+	          	<div class="col-md-6 mb-3">
+				    <label>Please specify the investment type you prefer</label>
+				    <select class="form-control">
+					<option value="Choose">Choose</option>
+					    <option value="Fixed Deposit">Fixed Deposit</option>
+					    <option value="Mutual Funds/ULIPs">Mutual Funds/ULIPs</option>
+					    <option value="Stock Market">Stock Market</option>
+					 </select>          		
+	          	</div>
+			  </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="card">
+	    <div class="card-header scb-blue" id="headingFive">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+	          Expenses
+	        </button>
+	      </h5>
+	    </div>
+	    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+	      <div class="card-body">
+	          <div class="form-row">
+	          	<label>Enter Monthly Expenses</label>
+				<input type="number" class="form-control" min="0">          		
+			  </div>
+	      </div>
+	      	<div class="row text-center">
+	      		<div class="col-md-12 mb-3">
+	      			<button class="btn btn-primary">Calculate</button>
+	      		</div>
+	    	</div>
+	    </div>
+	  </div>
+		<div class="card" style="margin-top: 30px;">
+		  <div class="card-header scb-green text-white">
+		    Summary
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">You need to start saving Rs. 3431.98 every month for 39 years.</h5>
+		  </div>
+		</div>
+	</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
