@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        td {
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="logo.jpeg" height="24px"></a><a class="navbar-brand" href="#">Standard Chartered</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Loan Programmers</a></li>
+                <li><a href="#">Knowledge Center</a></li>
+                <li><a href="#">Tools Calculator</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="well">
+            <h3>Welcome <strong><span id="divUser">User</span></strong> !!</h3>
+            <div style="margin-top: 24px;">
+                <b>Loyalties Points Earned</b>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%" id="divLoyaltyPt">
+                        40 Points
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-8">
+                    <table style="border:none;">
+                        <tr>
+                            <td><strong>Required Corpus:</strong></td>
+                            <td id="divRequired">Rs. 10000/-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Current Corpus:</strong></td>
+                            <td id="divCurrent">Rs. 5300/-</td>
+                        </tr>
+                    </table>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:0%" id="divPCurrent">
+                            Current Corpus
+                        </div>
+                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%" id="divPRequired">
+                            Required Corpus
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;padding-top: 24px;">
+                    <strong>
+                        Badges
+                        <div style="margin-top: 12px;">
+                            <img src="https://assets.stickpng.com/images/58738756f3a71010b5e8ef44.png" style="width: 200px;">
+                        </div>
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var firebaseConfig = {
+            apiKey: "AIzaSyBSrwr1vwr9z5Ne9WBhaBsl3Rx1gX_-knY",
+            authDomain: "assignment-c7063.firebaseapp.com",
+            databaseURL: "https://assignment-c7063.firebaseio.com",
+            projectId: "assignment-c7063",
+            storageBucket: "assignment-c7063.appspot.com",
+            messagingSenderId: "778456064899",
+            appId: "1:778456064899:web:3deb8604969809e8c1ccb6"
+        };
+        var cper;
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var postListRef = firebase.database().ref();
+        postListRef.on('value', (snapshot) => {
+            console.log(snapshot.val());
+            var s = snapshot.val();
+            var m = s.req_c;
+            var n = s.curr_c;
+            var b = s.loyalty_pt;
+            var v = s.user_name;
+            cper = n * 100 / (parseInt(m) + parseInt(n));
+            console.log(m, n);
+            document.getElementById("divRequired").innerHTML = "Rs. " + m + "/-";
+            document.getElementById("divUser").innerHTML = "" + v + "";
+            document.getElementById("divLoyaltyPt").innerHTML = "<b>" + b + " Points</b>";
+            document.getElementById("divLoyaltyPt").style.width = b + "%";
+            document.getElementById("divPCurrent").style.width = cper + "%";
+            document.getElementById("divPRequired").style.width = (100 - cper) + "%";
+        });
+        //console.log(postListRef);
+    </script>
+</body>
+
+</html>
