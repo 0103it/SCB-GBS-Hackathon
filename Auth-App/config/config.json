@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "radhauser",
+    "password": "radha123",
+    "database": "hackathon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "radhauser",
+    "password": "radha123",
+    "database": "hackathon_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "radhauser",
+    "password": "radha123",
+    "database": "hackathon_prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
