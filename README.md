@@ -3,8 +3,16 @@
 
 ##### This branch is created by Radha Gupta 
 
+### My Role in this Project is
+1. Planned All required database table for our App
+2. Planned all required fields in within all table
+3. Created Tables for whole Application
+4. Also Created Entity Relationship Diagram to show my whole Database flow
+5. Also created a simple node js app with some stuff but later our team switched to some other framework
+6. created quiz interface with some question to add show gamification
 
-##### My Plan for solution:
+
+##### Initially My Plan for solution:
 1. I am building a backend application which will take user's age, salary and time period to invest and the backend application will return the amount that the user should invest according to the request.
 2. Backend Application will return various investment options to the user 
     - Best Case
