@@ -1,0 +1,90 @@
+
+
+
+features -
+1. Authentication - yes 
+2.  Leaderboard - park
+3. Dashboard - loyalty pts and badges, quiz, corpus accumulated, leaderboard - yes
+4. Smart saver navigate
+5. Retirement goal calculator - yes 
+6. RTA - risk taking analysis - yes - edit portfolio, performance of the fund(wishlist)
+7. Asset classes and quiz (drop down) - yes
+8. Progress Bar - wishlisted
+9. Rewards - credits - yes FE-Shefali
+10. Tips to save more - one hyperlink
+11. Feedback 
+
+
+
+
+
+FRONT PAGE:
+FE-GJ BE-RAD
+Sign up -> registration page -> name, age, OTP, mobile number, Password, Password confirm, email id, CTC
+sign in	
+																							
+DASHBOARD: FE-SA,BE-
+their details
+Corpus accumulated(retirement plan added) - 0 ++
+//Current leaderboard - income and age range loyalty points and badges(waiver on processing fees on opening the account,loan applications rewards will have)    Quiz   
+Want to join the smart savers?
+
+Your retirement goal(suggest or pick)
+1. dream home - 30% (slider/range-wise)
+What will the dream home cost?
+2. dr car- 20%
+3. dr vacation  10%
+4. Health - 2%
+
+Total retirement amount needed - XX
+Amount you can invest per month - xx (100 rupees = 1 loyalty point)
+
+investment options - 4 assets - (drop down)
+1. fd - 6% return            
+2. mututal funds - 12%
+3. Small capital mf - 15%
+4. Equities - 20%
+
+risk taking ability test - user interface - 10 questions
+
+conservative aggressive or moderate 
+FD (details)- xx% - rs.
+MF - xx% - rs.
+Small Capital - xx% - rs.
+Equities - xx% - rs. 
+
+corpus accumulated per month - xx + profit = total amount
+
+
+Open an SCB account?
+
+
+Progress Bar - How close are you to your goal?
+
+
+10 rupees - reward - SC card se payment cashback/increased returns - points
+
+
+100 - 10 points - leaderboard
+in similar salary bracket and age bracket
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
