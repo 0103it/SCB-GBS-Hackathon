@@ -18,3 +18,6 @@
     - How much percentage of their salary user should keep in their Fixed deposit
     - How much they should invest in Stocks
     - The above data will also be dependent on Age and provided according to financial articles like Investopedia.com
+
+### Entity Diagram 
+![Entity Diagram](https://github.com/Geetanjalikarn/SCB-GBS-Hackathon/blob/Radha-Gupta/Entity_Relation_Code/App_Entity_Diagram.png?raw=true)    
