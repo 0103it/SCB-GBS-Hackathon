@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        td {
+            padding: 12px;
+        }
+        
+        .block5 {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="logo.jpeg" height="24px"></a><a class="navbar-brand" href="#">Standard Chartered</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Loan Programmers</a></li>
+                <li><a href="#">Knowledge Center</a></li>
+                <li><a href="#">Tools Calculator</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+		
+        <div class="well" style="margin-top: 24px;">
+            <h3>Welcome <strong><span id="divUser">User</span></strong> !!</h3>
+            <div style="margin-top: 24px;">
+                <b>Loyalties Points Earned</b>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%" id="divLoyaltyPt">
+                        40 Points
+                    </div>
+                </div>
+				<button type="button" data-toggle="modal" data-target="#myModal" style="background-color: #286090"><img src="https://lh3.googleusercontent.com/proxy/aAs2CQM9fm69BRrDBK5RGufxT5ZcYbAe8LGCd5fZ_iEDohfXn-967U0X_LnYw8dKrQ1ZMZtLS0w-yjZsPf7DCP3K4uyGgTe7z0QgsGoQQcM2XqfI3QEp5emUACfCY39amvzi-nTZfbwW7A" style="width: 36px;"></button>
+            </div>
+        </div>
+        <div class="well">
+            <div class="row">
+                <div class="col-sm-8">
+                    <table style="border:none;">
+                        <tr>
+                            <td><strong>Required Corpus:</strong></td>
+                            <td id="divRequired">Rs. 10000/-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Current Corpus:</strong></td>
+                            <td id="divCurrent">Rs. 5300/-</td>
+                        </tr>
+                    </table>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:0%" id="divPCurrent">
+                            Current Corpus
+                        </div>
+                        <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%" id="divPRequired">
+                            Required Corpus
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;padding-top: 24px;">
+                    <strong>
+                        Badges
+                        <div style="margin-top: 12px;">
+                            <img src="https://assets.stickpng.com/images/58738756f3a71010b5e8ef44.png" style="width: 200px;">
+                        </div>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                  Benefits of a Retirement fund Application</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>1. Helps You Plan Your Finances The most important function of the calculator is to tell you how much you need to save up for your retirement. It will tell you if your current plans are falling short, so you can take corrective
+                            measures to secure your future.</p>
+
+                        <p>2. Provides Financial Clarity If you already have a retirement plan in place, the calculator can help you gain clarity on how much you could end up with when you retire. Once you input the relevant details, it will let you know
+                            what kind of monthly income you could enjoy in your golden years.</p>
+
+                        <p>3. You Can Compare Your Options You can use the online calculator to understand what kind of retirement corpus different plans will offer you. You can then choose the kind of retirement plan that best suits your financial needs.</p>
+
+                        <p>4. Free & Easy to Use The retirement calculator is a simple tool to use. It doesn’t require any technical knowledge. It’s also free. Once you input the details, it will instantly show you how much you need to save up for your retirement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  How much to save up for retirement?</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">Generally speaking, working individuals are advised to save 10-15% of their pre-tax income to put away in retirement plans. This is a good place to start, but it may not be enough for your retired life. Understanding how much to save
+                        up for retirement can be tricky. First, you must keep track of your current outgoings. This includes your monthly living expenses as well as other leisure or medical expenses. You should then adjust this for your retired years.
+                        Your expenditure may reduce to 75% of what it is now. Once you understand how much these things cost you today, you can use an approximate rate of inflation and your life expectancy to understand the amount you will need to live
+                        a comfortable and hassle-free retired life.</div>
+                </div>
+            </div>
+
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="retirement.jpg" width = "1200px">
+                    <div class="carousel-caption">
+                        <h3 style = "color= "Black"><strong>Your Retirement Goals</strong></h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Quiz.png" width = "1200px">
+                    <div class="carousel-caption">
+                        <h3><strong>Take the quiz</strong></h3>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="risk.jpg",width = "200px">
+                    <div class="carousel-caption">
+                        <h3>Risk Taking Analysis</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="rewards.jpg",width : "1500px">
+                    <div class="carousel-caption">
+                        <h3>Rewards</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="logo.png", width : "1200px">
+                    <div class="carousel-caption">
+                        <h3 color : "Black">Open an SCB account</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="block5" style="text-align: center;margin-top: 24px;">
+            <a href="#" class="btn btn-primary">Your Retirement Goals</a>
+            <a href="#" class="btn btn-primary">Asset Classes</a>
+            <a href="#" class="btn btn-primary">Take the Risk taking ability</a>
+            <a href="#" class="btn btn-primary">How to claim your rewards?</a>
+            <a href="#" class="btn btn-primary">Open an SCB account?</a>
+        </div>
+    </div>
+   
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><img src="https://lh3.googleusercontent.com/proxy/aAs2CQM9fm69BRrDBK5RGufxT5ZcYbAe8LGCd5fZ_iEDohfXn-967U0X_LnYw8dKrQ1ZMZtLS0w-yjZsPf7DCP3K4uyGgTe7z0QgsGoQQcM2XqfI3QEp5emUACfCY39amvzi-nTZfbwW7A" style="width: 24px;">Leader Board</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <strong><div class="leader-name">1st Sameple User 1</div></strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                90 Points
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <strong><div class="leader-name">2nd Sample User 2</div></strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                60 Points
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <strong><div class="leader-name">3rd Sample User 3</div></strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                                40 Points
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBSrwr1vwr9z5Ne9WBhaBsl3Rx1gX_-knY",
+            authDomain: "assignment-c7063.firebaseapp.com",
+            databaseURL: "https://assignment-c7063.firebaseio.com",
+            projectId: "assignment-c7063",
+            storageBucket: "assignment-c7063.appspot.com",
+            messagingSenderId: "778456064899",
+            appId: "1:778456064899:web:3deb8604969809e8c1ccb6"
+        };
+        var cper;
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var postListRef = firebase.database().ref();
+        postListRef.on('value', (snapshot) => {
+            console.log(snapshot.val());
+            var s = snapshot.val();
+            var m = s.req_c;
+            var n = s.curr_c;
+            var b = s.loyalty_pt;
+            var v = s.user_name;
+            cper = n * 100 / (parseInt(m) + parseInt(n));
+            console.log(m, n);
+            document.getElementById("divRequired").innerHTML = "Rs. " + m + "/-";
+            document.getElementById("divCurrent").innerHTML = "Rs. " + n + "/-";
+            document.getElementById("divUser").innerHTML = "" + v + "";
+            document.getElementById("divLoyaltyPt").innerHTML = "<b>" + b + " Points</b>";
+            document.getElementById("divLoyaltyPt").style.width = b + "%";
+            document.getElementById("divPCurrent").style.width = cper + "%";
+            document.getElementById("divPRequired").style.width = (100 - cper) + "%";
+        });
+        //console.log(postListRef);
+    </script>
+</body>
+
+</html>
