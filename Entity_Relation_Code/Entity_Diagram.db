@@ -1,0 +1,33 @@
+// Created with the help of dbdiagram.io
+
+Table users as U {
+  id int [pk, increment] // auto-increment
+  name varchar
+  email varchar
+  password varchar
+  age integer
+  mobile varchar
+}
+
+Table investment_profile as IP {
+  id int [pk, increment]
+  risk_type varchar(255)
+}
+
+Table investment_profile_details as IPD {
+  dream_id int [pk, increment]
+  investment_profile_id int
+  dream_amount int
+}
+Ref: IPD.investment_profile_id - IP.id
+
+Table user_profile as UP{
+  id int [pk, increment]
+  userId int
+  loyalties_earned int
+  current_corpus int
+  required_corpus int
+  investment_profile_id int
+}
+Ref: UP.userId - U.id
+Ref: UP.investment_profile_id - IP.id
